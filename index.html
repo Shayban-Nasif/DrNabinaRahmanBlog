@@ -24,12 +24,18 @@
 
         /* Hero Section */
         header {
-            background: linear-gradient(135deg, rgba(0, 74, 153, 0.8), rgba(0, 139, 163, 0.8)), url('assets/cover.jpg');
+            background: linear-gradient(135deg, rgba(0, 74, 153, 0.85), rgba(0, 139, 163, 0.85)), url('assets/cover.jpg');
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 120px 20px;
+            padding: 100px 20px;
             text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
         }
 
         .profile-img-container {
@@ -40,80 +46,142 @@
             margin: 0 auto 20px auto;
             overflow: hidden;
             background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+        
         .profile-img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
 
-        /* Sticky Navigation */
+        h1 { margin: 10px 0; font-size: 2.8rem; letter-spacing: 1px; }
+        .subtitle { font-size: 1.4rem; font-weight: 300; margin-bottom: 10px; }
+        
+        /* Sticky Navigation Bar */
         nav {
             background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            display: flex;
-            justify-content: center;
             padding: 10px 0;
         }
 
         .nav-links {
             display: flex;
-            gap: 20px;
+            gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
+            max-width: 1100px;
+            margin: auto;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text);
             font-weight: 600;
-            padding: 8px 15px;
-            border-radius: 20px;
+            padding: 8px 18px;
+            border-radius: 25px;
             transition: 0.3s;
             font-size: 0.9rem;
         }
+
+        .nav-links a:hover { color: var(--primary); }
 
         .nav-links a.active {
             background: var(--primary);
             color: white;
         }
 
-        /* Sections */
-        section { padding: 100px 20px; border-bottom: 1px solid #eee; max-width: 1000px; margin: auto; }
-        h2 { color: var(--primary); text-align: center; margin-bottom: 40px; }
+        /* General Sections */
+        section { padding: 80px 0; border-bottom: 1px solid #eee; }
+        h2 { 
+            color: var(--primary); 
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-        .card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 20px; border: 1px solid #eee; }
-        .badge { background: var(--primary); color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+        }
 
-        .timeline-item { padding-left: 20px; border-left: 3px solid var(--secondary); margin-bottom: 25px; }
-        .date { font-weight: bold; color: var(--secondary); }
+        /* Timeline */
+        .timeline { list-style: none; padding: 0; }
+        .timeline-item { 
+            margin-bottom: 30px; 
+            padding-left: 30px; 
+            border-left: 3px solid var(--secondary);
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--primary);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 5px;
+        }
+        .date { font-weight: bold; color: var(--secondary); font-size: 0.9rem; }
 
-        footer { text-align: center; padding: 40px; background: #1a1a1a; color: white; }
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 10px;
+        }
 
-        @media (max-width: 600px) {
-            .nav-links { gap: 5px; }
-            .nav-links a { font-size: 0.75rem; padding: 5px 10px; }
+        footer { text-align: center; padding: 50px; background: #1a1a1a; color: white; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .nav-links a { font-size: 0.8rem; padding: 5px 10px; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="profile-img-container">
-        <img src="assets/nabina.jpg" alt="Dr. Nabina Rahman">
+    <div class="container">
+        <div class="profile-img-container">
+            <img src="assets/nabina.jpg" alt="Dr. Nabina Rahman" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <i class="fa fa-user-md fa-5x" style="color:white; display:none;"></i>
+        </div>
+        <h1>Dr. Nabina Rahman</h1>
+        <p class="subtitle">MBBS, FCPS (Part I), MS (Plastic Surgery)</p>
+        <p>Assistant Professor, National Institute of Burn and Plastic Surgery</p>
+        <span class="badge">33rd BCS (Health)</span>
     </div>
-    <h1>Dr. Nabina Rahman</h1>
-    <p style="font-size: 1.2rem;">Assistant Professor | Plastic & Reconstructive Surgeon</p>
-    <span class="badge">33rd BCS (Health)</span>
 </header>
 
 <nav id="navbar">
     <div class="nav-links">
-        <a href="#about" class="nav-item">Expertise</a>
+        <a href="#about" class="nav-item">About</a>
         <a href="#research" class="nav-item">Research</a>
         <a href="#education" class="nav-item">Education</a>
         <a href="#experience" class="nav-item">Experience</a>
@@ -121,94 +189,130 @@
     </div>
 </nav>
 
-<section id="about">
-    <h2>Clinical Expertise</h2>
-    <p>Dr. Nabina Rahman specializes in complex reconstructive procedures at the <strong>National Institute of Burn and Plastic Surgery</strong>. Her work focuses on restoring both form and function for patients across Bangladesh.</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-        <div class="card"><strong>Reconstructive</strong><br>Microvascular surgery</div>
-        <div class="card"><strong>Burn Care</strong><br>Acute & Secondary</div>
-        <div class="card"><strong>Pediatric</strong><br>Congenital anomalies</div>
-        <div class="card"><strong>Aesthetic</strong><br>Cosmetic surgery</div>
-    </div>
-</section>
+<div class="container">
+    <section id="about">
+        <h2>Professional Profile</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Clinical Expertise</h3>
+                <p>A specialist in advanced reconstructive and burn surgery. Her practice encompasses:</p>
+                <ul>
+                    <li>Reconstructive Surgery (Microvascular)</li>
+                    <li>Burn Surgery & Management</li>
+                    <li>Aesthetic & Cosmetic Surgery</li>
+                    <li>Pediatric Plastics</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Research Interest</h3>
+                <p>Dedicated to surgical excellence through evidence-based practice, focusing on:</p>
+                <ul>
+                    <li>Microvascular Surgery</li>
+                    <li>Regenerative Medicine</li>
+                    <li>Functional outcomes in Oral Reconstruction</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-<section id="research">
-    <h2>Research & Publications</h2>
-    <div class="card">
-        <span class="badge">Original Research [cite: 2]</span>
-        <h3>Evaluation of early surgical and functional outcomes of anterolateral thigh free flap (ALTFF) and radial forearm free flap (RFFF) [cite: 5]</h3>
-        <p><em>Published in International Surgery Journal, 2025 [cite: 1]</em></p>
-        <ul>
-            <li><strong>Success Rate:</strong> Flap survival was 90.9% for ALTFF.</li>
-            <li><strong>Finding:</strong> ALTFF donor sites were closed primarily, while RFFF sites required skin grafts[cite: 24].</li>
-            <li><strong>Significance:</strong> Both are reliable, but ALTFF offers less donor site morbidity[cite: 26].</li>
-        </ul>
-        <a href="https://dx.doi.org/10.18203/2349-2902.isj20253450" target="_blank" style="color:var(--primary); text-decoration: none; font-weight: bold;">View Journal Details [cite: 4]</a>
-    </div>
-</section>
+    <section id="research">
+        <h2>Published Research</h2>
+        <div class="card" style="border-left: 5px solid var(--primary); background: var(--accent);">
+            <span class="badge" style="margin-bottom: 10px;">Featured Publication</span>
+            <h3>Evaluation of early surgical and functional outcomes of anterolateral thigh free flap (ALTFF) and radial forearm free flap (RFFF) for reconstruction of soft tissue defects of oral cavity</h3>
+            <p><strong>Journal:</strong> International Surgery Journal | Nov 2025</p>
+            <p>This prospective study conducted at NIBPS evaluates flap survival and functional results, highlighting a 90.9% success rate for ALTFF in oral cavity reconstruction.</p>
+            <a href="https://dx.doi.org/10.18203/2349-2902.isj20253450" target="_blank" style="color: var(--primary); font-weight:bold; text-decoration:none;">
+                <i class="fa fa-external-link-alt"></i> View Journal Article (DOI)
+            </a>
+        </div>
+    </section>
 
-<section id="education">
-    <h2>Education</h2>
-    <div class="timeline-item">
-        <span class="date">2023</span>
-        <div><strong>Master of Surgery (MS) in Plastic Surgery</strong><br>Bangabandhu Sheikh Mujib Medical University</div>
-    </div>
-    <div class="timeline-item">
-        <span class="date">2013</span>
-        <div><strong>FCPS (Part I) in General Surgery</strong><br>BCPS</div>
-    </div>
-    <div class="timeline-item">
-        <span class="date">2012</span>
-        <div><strong>MBBS</strong><br>Rajshahi Medical College</div>
-    </div>
-</section>
+    <section id="education">
+        <h2>Educational Background</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="date">2023</span>
+                <strong>Master of Surgery (MS) in Plastic Surgery</strong>
+                <p>Bangabandhu Sheikh Mujib Medical University (BSMMU)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2013</span>
+                <strong>FCPS (Part I) in General Surgery</strong>
+                <p>Bangladesh College of Physicians and Surgeons (BCPS)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2012</span>
+                <strong>MBBS</strong>
+                <p>Rajshahi Medical College</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2006 / 2004</span>
+                <strong>HSC & SSC</strong>
+                <p>Achieved GPA 5.00 in both examinations.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="experience">
-    <h2>Professional Experience</h2>
-    <div class="timeline-item">
-        <span class="date">2025 - Present</span>
-        <div><strong>Assistant Professor</strong><br>National Institute of Burn and Plastic Surgery</div>
-    </div>
-    <div class="timeline-item">
-        <span class="date">2022 - 2025</span>
-        <div><strong>Registrar</strong><br>NIBPS</div>
-    </div>
-    <div class="timeline-item">
-        <span class="date">2014 - 2017</span>
-        <div><strong>Medical Officer</strong><br>Bagmara UHC (33rd BCS)</div>
-    </div>
-</section>
+    <section id="experience">
+        <h2>Professional Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="date">2025 - Present</span>
+                <strong>Assistant Professor</strong>
+                <p>National Institute of Burn and Plastic Surgery (NIBPS)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2022 - 2025</span>
+                <strong>Registrar</strong>
+                <p>National Institute of Burn and Plastic Surgery</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2017 - 2022</span>
+                <strong>Resident</strong>
+                <p>National Institute of Burn and Plastic Surgery</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2014 - 2017</span>
+                <strong>Medical Officer</strong>
+                <p>Bagmara UHC, Rajshahi (33rd BCS Health)</p>
+            </div>
+        </div>
+    </section>
 
-<section id="contact" style="text-align: center;">
-    <h2>Get in Touch</h2>
-    <p>For academic collaboration or professional inquiries:</p>
-    <p><i class="fa fa-envelope"></i> nabinamostafiz@gmail.com [cite: 14]</p>
-    <a href="https://www.linkedin.com/in/nabina-rahman/" target="_blank" style="font-size: 2rem; color: var(--primary);"><i class="fab fa-linkedin"></i></a>
-</section>
+    <section id="contact" style="text-align: center; border-bottom: none;">
+        <h2>Contact & Collaboration</h2>
+        <p>Email: <strong>nabinamostafiz@gmail.com</strong></p>
+        <div style="margin-top: 30px;">
+            <a href="https://www.linkedin.com/in/nabina-rahman/" target="_blank" style="color: var(--primary); font-size: 2.5rem; margin: 0 15px;"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:nabinamostafiz@gmail.com" style="color: var(--primary); font-size: 2.5rem; margin: 0 15px;"><i class="fa fa-envelope"></i></a>
+        </div>
+    </section>
+</div>
 
 <footer>
-    <p>&copy; 2026 Dr. Nabina Rahman</p>
+    <p>&copy; 2026 Dr. Nabina Rahman. All Rights Reserved.</p>
 </footer>
 
 <script>
-    // Script to highlight the active button during scroll
+    // Logic for Sticky Navigation Highlighting
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-item");
+    const navItems = document.querySelectorAll(".nav-item");
 
     window.addEventListener("scroll", () => {
         let current = "";
         sections.forEach((section) => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 150) {
+            if (pageYOffset >= sectionTop - 120) {
                 current = section.getAttribute("id");
             }
         });
 
-        navLinks.forEach((a) => {
-            a.classList.remove("active");
-            if (a.getAttribute("href").includes(current)) {
-                a.classList.add("active");
+        navItems.forEach((item) => {
+            item.classList.remove("active");
+            if (item.getAttribute("href").includes(current)) {
+                item.classList.add("active");
             }
         });
     });
