@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nabina Rahman | Assistant Professor - Plastic & Reconstructive Surgery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #004a99;
+            --secondary: #008ba3;
+            --accent: #eef7f9;
+            --text: #333;
+            --light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text);
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-blend-mode: overlay;
+            background-size: cover;
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .profile-img-placeholder {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.3);
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 { margin: 10px 0; font-size: 2.8rem; letter-spacing: 1px; }
+        .subtitle { font-size: 1.4rem; font-weight: 300; margin-bottom: 10px; }
+        .tagline { font-style: italic; opacity: 0.9; }
+
+        /* General Sections */
+        section { padding: 80px 0; border-bottom: 1px solid #eee; }
+        h2 { 
+            color: var(--primary); 
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Grid layouts */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border: 1px solid #eee;
+        }
+        .card:hover { transform: translateY(-5px); }
+
+        /* Timeline Styles */
+        .timeline { list-style: none; padding: 0; position: relative; }
+        .timeline-item { 
+            margin-bottom: 30px; 
+            padding-left: 30px; 
+            border-left: 3px solid var(--secondary);
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--primary);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 5px;
+        }
+        .date { font-weight: bold; color: var(--secondary); font-size: 0.9rem; }
+
+        /* Publication Card */
+        .pub-card {
+            border-left: 5px solid var(--primary);
+            background: var(--accent);
+        }
+
+        /* Badges */
+        .badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        /* Buttons & Socials */
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0,74,153,0.3);
+        }
+        .btn:hover { background: var(--secondary); transform: scale(1.05); }
+
+        .social-links { margin-top: 30px; }
+        .social-links a { 
+            color: var(--primary); 
+            font-size: 2rem; 
+            margin: 0 15px; 
+            transition: 0.3s;
+        }
+        .social-links a:hover { color: var(--secondary); }
+
+        footer { text-align: center; padding: 50px; background: #1a1a1a; color: white; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            section { padding: 40px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="profile-img-placeholder">
+            <i class="fa fa-user-md fa-5x" style="color:white;"></i>
+        </div>
+        <h1>Dr. Nabina Rahman</h1>
+        <p class="subtitle">MBBS, FCPS (Part I), MS (Plastic Surgery)</p>
+        <p class="tagline">Assistant Professor, National Institute of Burn and Plastic Surgery</p>
+        <div style="margin-top:20px;">
+            <span class="badge">33rd BCS (Health)</span>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <section id="about">
+        <h2>About Dr. Nabina</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Clinical Expertise</h3>
+                <p>A specialist in advanced reconstructive and burn surgery, providing life-changing care at the National Institute of Burn and Plastic Surgery. Her practice encompasses:</p>
+                <ul style="padding-left: 20px;">
+                    <li><strong>Reconstructive Surgery:</strong> Microvascular solutions for complex defects.</li>
+                    <li><strong>Burn Surgery:</strong> Comprehensive acute and post-burn management.</li>
+                    <li><strong>Aesthetic Surgery:</strong> Specialized cosmetic procedures.</li>
+                    <li><strong>Pediatric Plastics:</strong> Corrective surgery for congenital anomalies.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Research Focus</h3>
+                <p>Dedicated to advancing medical science in Bangladesh through rigorous clinical observation and academic publication.</p>
+                <p><strong>Primary Interests:</strong><br>Microvascular surgery, Regenerative medicine, and improving surgical outcomes in oral cavity reconstruction.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="research">
+        <h2>Published Research</h2>
+        <div class="card pub-card">
+            <span class="badge">Original Research Article</span>
+            <h3>Evaluation of early surgical and functional outcomes of anterolateral thigh free flap (ALTFF) and radial forearm free flap (RFFF) for reconstruction of soft tissue defects of oral cavity</h3>
+            <p><strong>Journal:</strong> International Surgery Journal | Nov 2025; 12(11): 1933-1939</p>
+            <p><strong>Key Findings:</strong> This study highlights that both ALTFF and RFFF are reliable for reconstruction, with ALTFF showing high survival rates (90.9%) and satisfying functional outcomes in the Bangladeshi population.</p>
+            <a href="https://dx.doi.org/10.18203/2349-2902.isj20253450" target="_blank" style="color: var(--primary); font-weight:bold; text-decoration:none;">
+                <i class="fa fa-external-link-alt"></i> View Journal Article (DOI)
+            </a>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Academic Background</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="date">2023</span>
+                <strong>MS (Plastic Surgery)</strong>
+                <p>Bangabandhu Sheikh Mujib Medical University (BSMMU)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2013</span>
+                <strong>FCPS (Part I) in General Surgery</strong>
+                <p>Bangladesh College of Physicians and Surgeons (BCPS)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2012</span>
+                <strong>MBBS</strong>
+                <p>Rajshahi Medical College</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2006 / 2004</span>
+                <strong>HSC & SSC</strong>
+                <p>Achieved GPA 5.00 in both secondary and higher secondary levels.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Career</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <span class="date">2025 - Present</span>
+                <strong>Assistant Professor</strong>
+                <p>National Institute of Burn and Plastic Surgery (NIBPS)</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2022 - 2025</span>
+                <strong>Registrar</strong>
+                <p>National Institute of Burn and Plastic Surgery</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2017 - 2022</span>
+                <strong>Resident</strong>
+                <p>National Institute of Burn and Plastic Surgery</p>
+            </div>
+            <div class="timeline-item">
+                <span class="date">2014 - 2017</span>
+                <strong>Medical Officer</strong>
+                <p>Bagmara UHC, Rajshahi (Entered through 33rd BCS Health)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="text-align: center; border-bottom: none;">
+        <h2>Global Collaboration</h2>
+        <p>Dr. Nabina is open to professional networking, research collaboration, and academic discussions.</p>
+        <div style="margin-top: 40px;">
+            <a href="mailto:nabinamostafiz@gmail.com" class="btn">
+                <i class="fa fa-paper-plane"></i> Send an Email
+            </a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/nabina-rahman/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:nabinamostafiz@gmail.com" title="Contact"><i class="fa fa-envelope-open"></i></a>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Dr. Nabina Rahman. Specialized in Plastic & Reconstructive Surgery.</p>
+        <p><small>Designed for professional and academic outreach.</small></p>
+    </div>
+</footer>
+
+</body>
+</html>
