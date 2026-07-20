@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Nabina Rahman | Assistant Professor - Plastic & Reconstructive Surgery</title>
+    <meta name="description" content="Dr. Nabina Rahman, MBBS, FCPS (Part I), MS (Plastic Surgery) — Assistant Professor at the National Institute of Burn and Plastic Surgery, Dhaka. Reconstructive, burn, and aesthetic surgery.">
+    <meta property="og:title" content="Dr. Nabina Rahman | Plastic & Reconstructive Surgery">
+    <meta property="og:description" content="Assistant Professor, National Institute of Burn and Plastic Surgery. Reconstructive, burn, and aesthetic surgery specialist.">
+    <meta property="og:image" content="assets/nabina.jpg">
+    <meta property="og:type" content="profile">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚕️</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Dr. Nabina Rahman",
+      "jobTitle": "Assistant Professor, Plastic Surgery",
+      "worksFor": { "@type": "Organization", "name": "National Institute of Burn and Plastic Surgery" },
+      "alumniOf": ["Rajshahi Medical College", "Bangabandhu Sheikh Mujib Medical University"],
+      "email": "mailto:nabinamostafiz@gmail.com",
+      "sameAs": ["https://www.linkedin.com/in/nabina-rahman/"]
+    }
+    </script>
     <style>
         :root {
             --primary: #004a99;
@@ -13,6 +31,8 @@
             --text: #333;
             --light: #f4f7f6;
         }
+
+        * { box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -50,7 +70,7 @@
             align-items: center;
             justify-content: center;
         }
-        
+
         .profile-img-container img {
             width: 100%;
             height: 100%;
@@ -59,7 +79,22 @@
 
         h1 { margin: 10px 0; font-size: 2.8rem; letter-spacing: 1px; }
         .subtitle { font-size: 1.4rem; font-weight: 300; margin-bottom: 10px; }
-        
+
+        .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 15px; }
+
+        .cta-row { margin-top: 25px; }
+        .btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .btn:hover { background: var(--accent); }
+
         /* Sticky Navigation Bar */
         nav {
             background: white;
@@ -98,8 +133,8 @@
 
         /* General Sections */
         section { padding: 80px 0; border-bottom: 1px solid #eee; }
-        h2 { 
-            color: var(--primary); 
+        h2 {
+            color: var(--primary);
             font-size: 2rem;
             text-align: center;
             margin-bottom: 50px;
@@ -117,20 +152,30 @@
         }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        
-        .card { 
-            background: white; 
-            padding: 30px; 
-            border-radius: 12px; 
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
             border: 1px solid #eee;
         }
 
+        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 15px 0 0; list-style: none; }
+        .tag-list li {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
         /* Timeline */
         .timeline { list-style: none; padding: 0; }
-        .timeline-item { 
-            margin-bottom: 30px; 
-            padding-left: 30px; 
+        .timeline-item {
+            margin-bottom: 30px;
+            padding-left: 30px;
             border-left: 3px solid var(--secondary);
             position: relative;
         }
@@ -156,6 +201,19 @@
             margin-top: 10px;
         }
 
+        .pub-card {
+            background: white;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            margin-bottom: 20px;
+        }
+        .pub-card.featured { border-left: 5px solid var(--primary); background: var(--accent); }
+        .pub-card h3 { margin-top: 10px; }
+        .pub-card a { color: var(--primary); font-weight: bold; text-decoration: none; }
+        .pub-card a:hover { text-decoration: underline; }
+
         footer { text-align: center; padding: 50px; background: #1a1a1a; color: white; }
 
         @media (max-width: 768px) {
@@ -169,13 +227,19 @@
 <header>
     <div class="container">
         <div class="profile-img-container">
-            <img src="assets/nabina.jpg" alt="Dr. Nabina Rahman" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <img src="assets/nabina.jpg" alt="Dr. Nabina Rahman" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <i class="fa fa-user-md fa-5x" style="color:white; display:none;"></i>
         </div>
         <h1>Dr. Nabina Rahman</h1>
         <p class="subtitle">MBBS, FCPS (Part I), MS (Plastic Surgery)</p>
         <p>Assistant Professor, National Institute of Burn and Plastic Surgery</p>
-        <span class="badge">33rd BCS (Health)</span>
+        <div class="badges">
+            <span class="badge">33rd BCS (Health)</span>
+            <span class="badge">SPSB Member</span>
+        </div>
+        <div class="cta-row">
+            <a class="btn" href="resume.pdf" download>Download CV (PDF)</a>
+        </div>
     </div>
 </header>
 
@@ -185,6 +249,7 @@
         <a href="#research" class="nav-item">Research</a>
         <a href="#education" class="nav-item">Education</a>
         <a href="#experience" class="nav-item">Experience</a>
+        <a href="#affiliations" class="nav-item">Affiliations</a>
         <a href="#contact" class="nav-item">Contact</a>
     </div>
 </nav>
@@ -196,20 +261,31 @@
             <div class="card">
                 <h3>Clinical Expertise</h3>
                 <p>A specialist in advanced reconstructive and burn surgery. Her practice encompasses:</p>
-                <ul>
-                    <li>Reconstructive Surgery (Microvascular)</li>
-                    <li>Burn Surgery & Management</li>
-                    <li>Aesthetic & Cosmetic Surgery</li>
+                <ul class="tag-list">
+                    <li>Microvascular Reconstruction</li>
+                    <li>Burn Surgery &amp; Management</li>
+                    <li>Oncoplastic &amp; Breast Reconstruction</li>
+                    <li>Cleft Lip &amp; Palate Surgery</li>
+                    <li>Congenital Hand Surgery</li>
+                    <li>Trauma Reconstruction</li>
+                    <li>Skin Cancer Surgery &amp; Reconstruction</li>
                     <li>Pediatric Plastics</li>
+                    <li>Rhinoplasty</li>
+                    <li>Otoplasty</li>
+                    <li>Abdominoplasty</li>
+                    <li>Liposuction</li>
+                    <li>Scar Management</li>
+                    <li>Pressure Ulcer Management</li>
                 </ul>
             </div>
             <div class="card">
                 <h3>Research Interest</h3>
                 <p>Dedicated to surgical excellence through evidence-based practice, focusing on:</p>
-                <ul>
+                <ul class="tag-list">
                     <li>Microvascular Surgery</li>
                     <li>Regenerative Medicine</li>
-                    <li>Functional outcomes in Oral Reconstruction</li>
+                    <li>Functional Outcomes in Oral Reconstruction</li>
+                    <li>Teaching &amp; Research</li>
                 </ul>
             </div>
         </div>
@@ -217,14 +293,23 @@
 
     <section id="research">
         <h2>Published Research</h2>
-        <div class="card" style="border-left: 5px solid var(--primary); background: var(--accent);">
+
+        <div class="pub-card featured">
             <span class="badge" style="margin-bottom: 10px;">Featured Publication</span>
             <h3>Evaluation of early surgical and functional outcomes of anterolateral thigh free flap (ALTFF) and radial forearm free flap (RFFF) for reconstruction of soft tissue defects of oral cavity</h3>
             <p><strong>Journal:</strong> International Surgery Journal | Nov 2025</p>
-            <p>This prospective study conducted at NIBPS evaluates flap survival and functional results, highlighting a 90.9% success rate for ALTFF in oral cavity reconstruction.</p>
-            <a href="https://dx.doi.org/10.18203/2349-2902.isj20253450" target="_blank" style="color: var(--primary); font-weight:bold; text-decoration:none;">
+            <p>Prospective study at NIBPS evaluating flap survival and functional results, highlighting a 90.9% success rate for ALTFF in oral cavity reconstruction.</p>
+            <a href="https://dx.doi.org/10.18203/2349-2902.isj20253450" target="_blank" rel="noopener">
                 <i class="fa fa-external-link-alt"></i> View Journal Article (DOI)
             </a>
+        </div>
+
+        <div class="pub-card">
+            <h3>Evaluation of Cystatin C as a Marker of Early Detection of AKI in Electric Burn Patients</h3>
+        </div>
+
+        <div class="pub-card">
+            <h3>Functional Outcomes of Proximal Femoral Locking Plate versus Proximal Femoral Nail in Subtrochanteric Femur Fractures</h3>
         </div>
     </section>
 
@@ -248,8 +333,8 @@
             </div>
             <div class="timeline-item">
                 <span class="date">2006 / 2004</span>
-                <strong>HSC & SSC</strong>
-                <p>Achieved GPA 5.00 in both examinations.</p>
+                <strong>HSC &amp; SSC</strong>
+                <p>Singra Damdama Pilot School and College — GPA 5.00 in both examinations.</p>
             </div>
         </div>
     </section>
@@ -277,15 +362,34 @@
                 <strong>Medical Officer</strong>
                 <p>Bagmara UHC, Rajshahi (33rd BCS Health)</p>
             </div>
+            <div class="timeline-item">
+                <span class="date">2012 - 2013</span>
+                <strong>Internship</strong>
+                <p>Rajshahi Medical College Hospital</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="affiliations" style="border-bottom: none;">
+        <h2>Professional Affiliations</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fa fa-user-md" style="color: var(--primary);"></i>
+                <strong> Society of Plastic Surgeons of Bangladesh (SPSB)</strong>
+            </div>
+            <div class="card">
+                <i class="fa fa-briefcase-medical" style="color: var(--primary);"></i>
+                <strong> Bangladesh Medical Association (BMA)</strong>
+            </div>
         </div>
     </section>
 
     <section id="contact" style="text-align: center; border-bottom: none;">
-        <h2>Contact & Collaboration</h2>
+        <h2>Contact &amp; Collaboration</h2>
         <p>Email: <strong>nabinamostafiz@gmail.com</strong></p>
         <div style="margin-top: 30px;">
-            <a href="https://www.linkedin.com/in/nabina-rahman/" target="_blank" style="color: var(--primary); font-size: 2.5rem; margin: 0 15px;"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:nabinamostafiz@gmail.com" style="color: var(--primary); font-size: 2.5rem; margin: 0 15px;"><i class="fa fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/nabina-rahman/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color: var(--primary); font-size: 2.5rem; margin: 0 15px;"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:nabinamostafiz@gmail.com" aria-label="Email" style="color: var(--primary); font-size: 2.5rem; margin: 0 15px;"><i class="fa fa-envelope"></i></a>
         </div>
     </section>
 </div>
@@ -295,27 +399,22 @@
 </footer>
 
 <script>
-    // Logic for Sticky Navigation Highlighting
-    const sections = document.querySelectorAll("section");
+    // Sticky-nav highlighting via IntersectionObserver (cheaper than a scroll listener)
     const navItems = document.querySelectorAll(".nav-item");
+    const navMap = new Map([...navItems].map(a => [a.getAttribute("href").slice(1), a]));
 
-    window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - 120) {
-                current = section.getAttribute("id");
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const link = navMap.get(entry.target.id);
+            if (!link) return;
+            if (entry.isIntersecting) {
+                navItems.forEach(item => item.classList.remove("active"));
+                link.classList.add("active");
             }
         });
+    }, { rootMargin: "-45% 0px -50% 0px" });
 
-        navItems.forEach((item) => {
-            item.classList.remove("active");
-            if (item.getAttribute("href").includes(current)) {
-                item.classList.add("active");
-            }
-        });
-    });
+    document.querySelectorAll("section[id]").forEach(section => observer.observe(section));
 </script>
 
 </body>
