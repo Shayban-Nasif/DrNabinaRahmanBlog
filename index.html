@@ -110,15 +110,6 @@
         .subtitle { font-size: 1.05rem; font-weight: 600; color: var(--gold-light); margin: 12px 0 4px; letter-spacing: 0.3px; }
         .role-line { font-size: 0.95rem; color: #cfd6e2; margin: 0; }
 
-        .credential-line {
-            margin-top: 22px;
-            font-size: 0.8rem;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: #b8c1d1;
-        }
-        .credential-line span:not(:last-child)::after { content: ''; display: inline-block; width: 4px; height: 4px; background: var(--gold-light); border-radius: 50%; margin: 0 14px; vertical-align: middle; }
-
         .cta-row { margin-top: 28px; }
         .btn {
             display: inline-block;
@@ -178,6 +169,11 @@
         }
 
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+
+        .focus-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 40px; }
+        .focus-item { background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--bd-green); padding: 22px 18px; text-align: center; }
+        .focus-item i { font-size: 1.6rem; color: var(--bd-green); margin-bottom: 10px; display: block; }
+        .focus-item span { font-weight: 700; color: var(--navy); font-size: 0.92rem; }
 
         .card { background: #fff; padding: 32px; border: 1px solid var(--line); border-top: 3px solid var(--navy); }
         .card h3 { font-size: 1.15rem; color: var(--navy); margin-top: 0; }
@@ -243,12 +239,8 @@
             <i class="fa fa-user-md fa-3x" style="color:var(--gold-light); display:none;"></i>
         </div>
         <h1>Dr. Nabina Rahman</h1>
-        <p class="subtitle">MBBS &middot; FCPS (Part I) &middot; MS (Plastic Surgery)</p>
+        <p class="subtitle">MBBS &middot; MS (Plastic Surgery)</p>
         <p class="role-line">Assistant Professor, National Institute of Burn and Plastic Surgery</p>
-        <div class="credential-line">
-            <span>33rd BCS (Health)</span>
-            <span>SPSB Member</span>
-        </div>
         <div class="cta-row">
             <a class="btn" href="resume.pdf" download>Download CV (PDF)</a>
         </div>
@@ -270,14 +262,20 @@
     <section id="about">
         <p class="section-label">Overview</p>
         <h2>Professional Profile</h2>
+        <div class="focus-grid">
+            <div class="focus-item"><i class="fa-solid fa-ribbon"></i><span>Breast Reconstruction</span></div>
+            <div class="focus-item"><i class="fa-solid fa-user-injured"></i><span>Trauma Reconstruction</span></div>
+            <div class="focus-item"><i class="fa-solid fa-baby"></i><span>Congenital Anomaly Reconstruction</span></div>
+            <div class="focus-item"><i class="fa-solid fa-diagram-project"></i><span>Microvascular Surgery</span></div>
+        </div>
         <div class="grid">
             <div class="card">
                 <h3>Clinical Expertise</h3>
                 <p>A specialist in advanced reconstructive and burn surgery. Her practice encompasses:</p>
                 <ul class="tag-list">
+                    <li>Breast Reconstruction &amp; Oncoplastic Breast Surgery</li>
                     <li>Microvascular Reconstruction</li>
                     <li>Burn Surgery &amp; Management</li>
-                    <li>Oncoplastic &amp; Breast Reconstruction</li>
                     <li>Cleft Lip &amp; Palate Surgery</li>
                     <li>Congenital Hand Surgery</li>
                     <li>Trauma Reconstruction</li>
@@ -297,8 +295,8 @@
                 <ul class="tag-list">
                     <li>Microvascular Surgery</li>
                     <li>Regenerative Medicine</li>
-                    <li>Functional Outcomes in Oral Reconstruction</li>
                     <li>Teaching &amp; Research</li>
+                    <li>Hand Surgery</li>
                 </ul>
             </div>
         </div>
