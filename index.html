@@ -9,8 +9,11 @@
     <meta property="og:description" content="Assistant Professor, National Institute of Burn and Plastic Surgery. Reconstructive, burn, and aesthetic surgery specialist.">
     <meta property="og:image" content="assets/nabina.jpg">
     <meta property="og:type" content="profile">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚕️</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%228%22 fill=%22%220b2545%22/><text x=%2232%22 y=%2243%22 font-family=%22Georgia,serif%22 font-size=%2228%22 fill=%22%23c9a24b%22 text-anchor=%22middle%22>NR</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -25,200 +28,186 @@
     </script>
     <style>
         :root {
-            --primary: #004a99;
-            --secondary: #008ba3;
-            --accent: #eef7f9;
-            --text: #333;
-            --light: #f4f7f6;
+            --navy: #0b2545;
+            --navy-light: #13355e;
+            --gold: #b08d3f;
+            --gold-light: #c9a24b;
+            --text: #2a2f36;
+            --muted: #5b6470;
+            --line: #e3e0d8;
+            --paper: #fdfcfa;
         }
 
         * { box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Source Sans 3', 'Segoe UI', Tahoma, sans-serif;
+            line-height: 1.65;
             margin: 0;
             color: var(--text);
+            background: var(--paper);
             scroll-behavior: smooth;
         }
 
-        /* Hero Section */
+        h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+
+        /* Hero */
         header {
-            background: linear-gradient(135deg, rgba(0, 74, 153, 0.85), rgba(0, 139, 163, 0.85)), url('assets/cover.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 100px 20px;
+            background: linear-gradient(150deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: #f4f1ea;
+            padding: 90px 20px 70px;
             text-align: center;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
         }
 
-        .container {
-            max-width: 1100px;
-            margin: auto;
-            padding: 20px;
-        }
+        .container { max-width: 1080px; margin: auto; padding: 20px; }
 
         .profile-img-container {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid rgba(255,255,255,0.3);
-            margin: 0 auto 20px auto;
+            width: 152px;
+            height: 152px;
+            border-radius: 10px;
+            border: 2px solid var(--gold-light);
+            box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+            margin: 0 auto 26px auto;
             overflow: hidden;
-            background: #ddd;
+            background: #1a2f4d;
             display: flex;
             align-items: center;
             justify-content: center;
         }
+        .profile-img-container img { width: 100%; height: 100%; object-fit: cover; }
 
-        .profile-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        h1 { margin: 0; font-size: 2.5rem; font-weight: 700; letter-spacing: 0.5px; color: #fff; }
+        .subtitle { font-size: 1.05rem; font-weight: 600; color: var(--gold-light); margin: 12px 0 4px; letter-spacing: 0.3px; }
+        .role-line { font-size: 0.95rem; color: #cfd6e2; margin: 0; }
+
+        .credential-line {
+            margin-top: 22px;
+            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #b8c1d1;
         }
+        .credential-line span:not(:last-child)::after { content: ''; display: inline-block; width: 4px; height: 4px; background: var(--gold-light); border-radius: 50%; margin: 0 14px; vertical-align: middle; }
 
-        h1 { margin: 10px 0; font-size: 2.8rem; letter-spacing: 1px; }
-        .subtitle { font-size: 1.4rem; font-weight: 300; margin-bottom: 10px; }
-
-        .badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 15px; }
-
-        .cta-row { margin-top: 25px; }
+        .cta-row { margin-top: 28px; }
         .btn {
             display: inline-block;
-            background: white;
-            color: var(--primary);
+            border: 1px solid var(--gold-light);
+            color: var(--gold-light);
             font-weight: 600;
-            padding: 10px 24px;
-            border-radius: 25px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            padding: 10px 26px;
             text-decoration: none;
-            transition: 0.3s;
+            transition: 0.25s;
         }
-        .btn:hover { background: var(--accent); }
+        .btn:hover { background: var(--gold-light); color: var(--navy); }
 
-        /* Sticky Navigation Bar */
+        /* Nav */
         nav {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background: var(--paper);
+            border-bottom: 1px solid var(--line);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 10px 0;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1100px;
-            margin: auto;
-        }
+        .nav-links { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; max-width: 1080px; margin: auto; }
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text);
+            color: var(--muted);
             font-weight: 600;
-            padding: 8px 18px;
-            border-radius: 25px;
-            transition: 0.3s;
-            font-size: 0.9rem;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 18px 16px;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
         }
+        .nav-links a:hover { color: var(--navy); }
+        .nav-links a.active { color: var(--navy); border-bottom-color: var(--gold); }
 
-        .nav-links a:hover { color: var(--primary); }
-
-        .nav-links a.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* General Sections */
-        section { padding: 80px 0; border-bottom: 1px solid #eee; }
-        h2 {
-            color: var(--primary);
-            font-size: 2rem;
+        /* Sections */
+        section { padding: 70px 0; border-bottom: 1px solid var(--line); }
+        .section-label {
             text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        h2::after {
-            content: '';
-            width: 60px;
-            height: 3px;
-            background: var(--secondary);
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-        }
-
-        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 15px 0 0; list-style: none; }
-        .tag-list li {
-            background: var(--accent);
-            color: var(--primary);
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--gold);
             font-weight: 600;
+            margin-bottom: 8px;
+        }
+        h2 {
+            color: var(--navy);
+            font-size: 1.9rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 0 0 46px;
+        }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+
+        .card { background: #fff; padding: 32px; border: 1px solid var(--line); border-top: 3px solid var(--navy); }
+        .card h3 { font-size: 1.15rem; color: var(--navy); margin-top: 0; }
+
+        .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 18px 0 0; list-style: none; }
+        .tag-list li {
+            border: 1px solid var(--line);
+            color: var(--navy-light);
+            padding: 5px 13px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: #f7f5f0;
         }
 
         /* Timeline */
-        .timeline { list-style: none; padding: 0; }
-        .timeline-item {
-            margin-bottom: 30px;
-            padding-left: 30px;
-            border-left: 3px solid var(--secondary);
-            position: relative;
-        }
+        .timeline { list-style: none; padding: 0; max-width: 720px; margin: auto; }
+        .timeline-item { margin-bottom: 28px; padding-left: 28px; border-left: 2px solid var(--line); position: relative; }
         .timeline-item::before {
             content: '';
-            width: 15px;
-            height: 15px;
-            background: var(--primary);
+            width: 10px; height: 10px;
+            background: var(--paper);
+            border: 2px solid var(--gold);
             border-radius: 50%;
             position: absolute;
-            left: -9px;
-            top: 5px;
+            left: -6px; top: 5px;
         }
-        .date { font-weight: bold; color: var(--secondary); font-size: 0.9rem; }
+        .date { font-weight: 700; color: var(--gold); font-size: 0.82rem; letter-spacing: 0.5px; }
+        .timeline-item strong { display: block; margin-top: 3px; font-size: 1.05rem; color: var(--navy); }
+        .timeline-item p { margin: 3px 0 0; color: var(--muted); font-size: 0.92rem; }
 
         .badge {
             display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-top: 10px;
+            border: 1px solid var(--gold-light);
+            color: var(--navy);
+            padding: 4px 14px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
         }
 
-        .pub-card {
-            background: white;
-            padding: 25px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid #eee;
-            margin-bottom: 20px;
-        }
-        .pub-card.featured { border-left: 5px solid var(--primary); background: var(--accent); }
-        .pub-card h3 { margin-top: 10px; }
-        .pub-card a { color: var(--primary); font-weight: bold; text-decoration: none; }
-        .pub-card a:hover { text-decoration: underline; }
+        .pub-card { background: #fff; padding: 26px 30px; border: 1px solid var(--line); margin-bottom: 18px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .pub-card.featured { border-left: 3px solid var(--gold); background: #fbf9f4; }
+        .pub-card h3 { font-size: 1.05rem; margin: 12px 0 8px; color: var(--navy); font-weight: 700; }
+        .pub-card a { color: var(--navy-light); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--gold-light); }
+        .pub-card a:hover { color: var(--gold); }
 
-        footer { text-align: center; padding: 50px; background: #1a1a1a; color: white; }
+        footer { text-align: center; padding: 40px; background: var(--navy); color: #b8c1d1; font-size: 0.85rem; }
 
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .nav-links a { font-size: 0.8rem; padding: 5px 10px; }
+            h1 { font-size: 1.9rem; }
+            .nav-links a { font-size: 0.72rem; padding: 14px 10px; }
         }
     </style>
 </head>
@@ -228,14 +217,14 @@
     <div class="container">
         <div class="profile-img-container">
             <img src="assets/nabina.jpg" alt="Dr. Nabina Rahman" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-            <i class="fa fa-user-md fa-5x" style="color:white; display:none;"></i>
+            <i class="fa fa-user-md fa-3x" style="color:var(--gold-light); display:none;"></i>
         </div>
         <h1>Dr. Nabina Rahman</h1>
-        <p class="subtitle">MBBS, FCPS (Part I), MS (Plastic Surgery)</p>
-        <p>Assistant Professor, National Institute of Burn and Plastic Surgery</p>
-        <div class="badges">
-            <span class="badge">33rd BCS (Health)</span>
-            <span class="badge">SPSB Member</span>
+        <p class="subtitle">MBBS &middot; FCPS (Part I) &middot; MS (Plastic Surgery)</p>
+        <p class="role-line">Assistant Professor, National Institute of Burn and Plastic Surgery</p>
+        <div class="credential-line">
+            <span>33rd BCS (Health)</span>
+            <span>SPSB Member</span>
         </div>
         <div class="cta-row">
             <a class="btn" href="resume.pdf" download>Download CV (PDF)</a>
@@ -256,6 +245,7 @@
 
 <div class="container">
     <section id="about">
+        <p class="section-label">Overview</p>
         <h2>Professional Profile</h2>
         <div class="grid">
             <div class="card">
@@ -292,10 +282,11 @@
     </section>
 
     <section id="research">
+        <p class="section-label">Scholarship</p>
         <h2>Published Research</h2>
 
         <div class="pub-card featured">
-            <span class="badge" style="margin-bottom: 10px;">Featured Publication</span>
+            <span class="badge">Featured Publication</span>
             <h3>Evaluation of early surgical and functional outcomes of anterolateral thigh free flap (ALTFF) and radial forearm free flap (RFFF) for reconstruction of soft tissue defects of oral cavity</h3>
             <p><strong>Journal:</strong> International Surgery Journal | Nov 2025</p>
             <p>Prospective study at NIBPS evaluating flap survival and functional results, highlighting a 90.9% success rate for ALTFF in oral cavity reconstruction.</p>
@@ -314,6 +305,7 @@
     </section>
 
     <section id="education">
+        <p class="section-label">Academic Record</p>
         <h2>Educational Background</h2>
         <div class="timeline">
             <div class="timeline-item">
@@ -340,6 +332,7 @@
     </section>
 
     <section id="experience">
+        <p class="section-label">Career</p>
         <h2>Professional Journey</h2>
         <div class="timeline">
             <div class="timeline-item">
@@ -371,25 +364,27 @@
     </section>
 
     <section id="affiliations" style="border-bottom: none;">
+        <p class="section-label">Recognition</p>
         <h2>Professional Affiliations</h2>
         <div class="grid">
             <div class="card">
-                <i class="fa fa-user-md" style="color: var(--primary);"></i>
+                <i class="fa fa-user-md" style="color: var(--gold);"></i>
                 <strong> Society of Plastic Surgeons of Bangladesh (SPSB)</strong>
             </div>
             <div class="card">
-                <i class="fa fa-briefcase-medical" style="color: var(--primary);"></i>
+                <i class="fa fa-briefcase-medical" style="color: var(--gold);"></i>
                 <strong> Bangladesh Medical Association (BMA)</strong>
             </div>
         </div>
     </section>
 
     <section id="contact" style="text-align: center; border-bottom: none;">
+        <p class="section-label">Get in Touch</p>
         <h2>Contact &amp; Collaboration</h2>
-        <p>Email: <strong>nabinamostafiz@gmail.com</strong></p>
-        <div style="margin-top: 30px;">
-            <a href="https://www.linkedin.com/in/nabina-rahman/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color: var(--primary); font-size: 2.5rem; margin: 0 15px;"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:nabinamostafiz@gmail.com" aria-label="Email" style="color: var(--primary); font-size: 2.5rem; margin: 0 15px;"><i class="fa fa-envelope"></i></a>
+        <p style="color: var(--muted);">Email: <strong style="color: var(--navy);">nabinamostafiz@gmail.com</strong></p>
+        <div style="margin-top: 26px;">
+            <a href="https://www.linkedin.com/in/nabina-rahman/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color: var(--navy); font-size: 1.7rem; margin: 0 14px;"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:nabinamostafiz@gmail.com" aria-label="Email" style="color: var(--navy); font-size: 1.7rem; margin: 0 14px;"><i class="fa fa-envelope"></i></a>
         </div>
     </section>
 </div>
